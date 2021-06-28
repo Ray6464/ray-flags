@@ -1,0 +1,25 @@
+{
+  "name": "ray-flags",
+  "version": "0.0.2",
+  "description": "An easy command line flags handeling library for ray-userland software.",
+  "main": "ray-flags.min.js",
+  "scripts": {
+    "test": "node tests/mainTest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ray6464/ray-flags.git"
+  },
+  "keywords": [
+    "flags",
+    "command-line",
+    "ray-userland",
+    "cli"
+  ],
+  "author": "Ray Voice, Anna Voice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ray6464/ray-flags/issues"
+  },
+  "homepage": "https://github.com/Ray6464/ray-flags#readme"
+}
