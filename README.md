@@ -13,11 +13,18 @@ const flags = require('ray-flags');
 
 console.log(flags.n); // logs name
 console.log(flags.a); // logs age
+console.log(flags.s); // logs living status
 
 ```
 Call your `ray-flags` using app with the following approach:
 ```
-app -n "John Doe" -a 45
+app -n "John Doe" -a 45 -s
+```
+stdout Output will be:
+```
+John Doe
+45
+true
 ```
 
 # Comming Soon

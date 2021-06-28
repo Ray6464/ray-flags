@@ -1,11 +1,26 @@
-let oargv = process.argv;
+const flagRegex = /-[a-z]/i;
+
+let oargv = Object.assign([], process.argv); //original arguments vector
 oargv.shift();
 oargv.shift();
+oargv.push(null);
+
+let iargv = oargv; // Interpreted arguments vector
+iargv.forEach((key, index, arr) => {
+  if (flagRegex.test(key))
+    if (flagRegex.test(arr[index+1]))
+      iargv.splice(index+1, 0, true);
+});
+
+iargv = iargv.map(arg => {
+  if (arg === null) return true;
+  else return arg;
+});
 
 const argv = {
   flags : {},
-  keys : oargv.filter(arg=> /-[a-z]/i.test(arg)),
-  values : oargv.filter(arg=> !/-[a-z]/i.test(arg)),
+  keys : iargv.filter(arg=> flagRegex.test(arg)),
+  values : iargv.filter(arg=> !flagRegex.test(arg)),
 }
 
 argv.keys = argv.keys.map(key => key.slice(1));
