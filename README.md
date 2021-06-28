@@ -6,7 +6,7 @@ An easy command line flags handeling library for ray-userland software.
 npm i ray-flags --save
 ```
 
-#Usage
+# Usage
 Add the following code to your app:
 ```javascript
 const flags = require('ray-flags');

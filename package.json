@@ -1,6 +1,6 @@
 {
   "name": "ray-flags",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An easy command line flags handeling library for ray-userland software.",
   "main": "ray-flags.min.js",
   "scripts": {
