@@ -1,4 +1,4 @@
-const flagRegex = /-[a-z]/i;
+const flagRegex = /^-[a-z]/i;
 
 let oargv = Object.assign([], process.argv); //original arguments vector
 oargv.shift();
